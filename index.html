@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button{
+        margin-right:10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="btn-container" class="btn-container"></div>
+
+    <script>
+      const buttonContainer = document.getElementById("btn-container");
+      let m1 = "mesaj1";
+      let m2 = "mesaj2";
+      let m3 = "mesaj5";
+      let m4 = "mesaj4";
+      let m5 = "mesaj5";
+      const newButton = (buttonName, attributeName) => `<button type="button" 
+      id="${buttonName}"
+      onclick="alert(this.innerHTML)"
+      denemeAttr="${attributeName}"
+      >${buttonName}</button>`;
+
+      buttonContainer.innerHTML =
+        newButton("btn1", m1) +
+        newButton("btn2", m2) +
+        newButton("btn3", m3) +
+        newButton("btn4", m4) +
+        newButton("btn5", m5);
+    </script>
+  </body>
+</html>

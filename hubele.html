@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button{
+        margin-right:10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="btn-container" class="btn-container"></div>
+
+    <script>
+      const message = "deneme";
+      const message2 = "deneme2";
+      const message3 = "deneme3";
+      const message4 = "deneme4";
+      const message5 = "deneme5";
+      const buttonContainer = document.getElementById("btn-container");
+      const newButton = (buttonName, message) => `<button type="button" 
+      id="${buttonName}"
+      onclick="alert('${message}')"
+      yaman="${message}"
+      >${buttonName}</button>
+      `;
+
+
+      buttonContainer.innerHTML =
+        newButton("btn1", message) +
+        newButton("btn2", message2) +
+        newButton("btn3", message3) +
+        newButton("btn4", message4) +
+        newButton("btn5", message5);
+
+        
+    </script>
+  </body>
+</html>
